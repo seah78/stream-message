@@ -1,0 +1,39 @@
+/* Style global */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Fond transparent */
+    overflow: hidden;
+}
+
+/* Conteneur du texte */
+#text-container {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Texte animé */
+#animated-text {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    position: absolute;
+    white-space: nowrap;
+    animation: moveText 10s linear infinite;
+    cursor: pointer;
+}
+
+/* Animation du texte */
+@keyframes moveText {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
